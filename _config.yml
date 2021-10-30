@@ -1,0 +1,10 @@
+# General Settings
+title: Mine tanker om informasjonssikkerhet
+email: person@example.com
+description: "Et pragmatisk blikk på informasjonsikkerhet og konsulentyrket."
+baseurl: ""
+url: ""
+
+
+# Build settings
+markdown: kramdown

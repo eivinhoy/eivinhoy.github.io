@@ -1,28 +1,32 @@
 body { 
-    font-family: sans-serif;
-    background-color: #ececec;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #121212;
+    color: #9e9e9e;
 }
 
 h1, h2, h3, h4, h5 {
-    color: #142d4c;
+    color: #627d98;
 }
 
 a, a:hover {
+    color: rgb(127, 121, 177);
     text-decoration: none;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a {
-    color: #142d4c;
+    color: #627d98;
 }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
-    color: #142d4c;
+    color: #627d98;
 }
 
+
 header {
-    background-color: #385170;
+    background-color: #222222;
     display: flex;
     justify-content: space-between;
+    border-radius: 10px;
     align-content: center;
     padding: 10px;
 }
@@ -31,11 +35,11 @@ header .site-name {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.5;
-    color: #ffffff;
+    color: #627d98;
 }
 
 header .site-name a {
-    color: #ffffff;
+    color: #627d98;
     vertical-align: sub;
 }
 
@@ -53,18 +57,18 @@ nav .nav-item {
 }
 
 nav a {
-    color: #ffffff;
+    color: #9e9e9e;
 }
 
 nav a:hover {
-    color: #9fd3c7;
+    color: #05ac85;
 }
 
 footer {
     padding: 15px;
-    color: #ffffff;
-    background-color: #385170;
-    box-shadow: 0 50vh 0 50vh #385170;
+    color: #9e9e9e;
+    background-color: #121212;
+    box-shadow: 0 50vh 0 50vh #121212;
 }
 
 main {
@@ -73,7 +77,8 @@ main {
 }
 
 article {
-    background-color: #ffffff;
+    background-color: #222222;
+    border-radius: 10px;
     padding: 15px;
     margin: 30px 0;
 }

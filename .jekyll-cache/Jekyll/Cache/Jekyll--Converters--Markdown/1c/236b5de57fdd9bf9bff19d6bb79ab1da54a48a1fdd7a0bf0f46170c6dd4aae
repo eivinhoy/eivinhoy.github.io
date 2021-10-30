@@ -1,0 +1,21 @@
+I"�
+<h3 id="kort">Kort</h3>
+<p>EU stiller nye krav til informasjonssikkerhet for kritisk infrastruktur som vil falle tett inntil dagens norske sikkerhetslov. Skjermingsverdige objekter og infrastruktur kan bli klassifisert som VIKTIG, KRITISK og MEGET KRITISK etter Sikkerhetsloven. Med NIS2 legges klassifiseringene Vesentlig og Viktig (igjen). Dermed kan regulering av cybersikkerhet i kritisk infrastruktur bli enda mer uoversiktlig for alle interessenter. Man får håpe at norske myndigheter i det minste klarer å velge ut begreper så vi får 5 ulike klassifiseringer. I tilegg vil det ta mange år før dette er gjeldene, NIS1 er enda ikke en del av norsk lov.</p>
+
+<h3 id="nis-2">NIS 2</h3>
+<p>Tilbake i desember 2020 ble det kjent at EU vil utvide NIS direktivet for å møte dagens trusselbilde, dermed står NIS2 for døren. NIS er enda ikke implementert i EØS, men det vil sannsynligvis skje i løpet av 2022.</p>
+
+<p>For de som ikke kjenner NIS kan det sees på som en rekke krav for å beskytte kritisk infrastruktur mot cyberangrep. Dermed er det likheter til norske sikkerhetsloven. Men NIS stiller få faktiske krav og gir store muligheter for ulik tolkning blant EUs medlemsland. Dermed har ikke effekten av direktivet vært særlig stor.</p>
+
+<p>Med NIS2 skjer det endringer. For det første introduserers GDPR-style bøter for brudd, 10 000 000 EURO eller 2% av global omsetning. Dette er akkurat halvparten av det bedrifter kan få som maksimale bøter for brudd på GDPR. I tillegg så økes antall sektorer til 15 definerte sektorer. De 15 sektorene deles inn i vesentlige (essential) og viktige (important). De to ulike gruppene vil underlegges ulikt tilsynsregime.</p>
+
+<h4 id="krav-til-informasjonssikkerhet">Krav til informasjonssikkerhet</h4>
+<blockquote>
+  <p><em>Forslaget styrker sikkerhetskravene som stilles til tilbydere ved å innføre <strong>krav om en risikostyringsmetode</strong> som skal gi en minimumsliste over grunnleggende sikkerhetselementer som må legges til grunn for sikkerhetsarbeidet. Medlemsstatene er pålegges også å sikre at tilbydere iverksetter hensiktsmessige og proporsjonale tekniske og organisatoriske tiltak for å håndtere risiko i nettverk og informasjonssystemer, som er en videreføring av gjeldende direktiv. Det foreslås imidlertid noen minimumskrav, blant annet <strong>krav om at tilbydere håndterer cybersikkerhetsrisiko i forsyningskjeder og hos leverandører, planer for vedlikehold, overvåkning og testing samt bruk av krypto</strong>.</em></p>
+</blockquote>
+
+<p>Regjeringens notat: <a href="https://www.regjeringen.no/no/sub/eos-notatbasen/notatene/2021/feb/nis2-direktivet/id2846097/">NIS2-direktivet</a></p>
+
+<h3 id="relasjon-til-sikkerhetsloven">Relasjon til Sikkerhetsloven</h3>
+
+:ET

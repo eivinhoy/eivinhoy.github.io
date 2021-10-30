@@ -1,8 +1,14 @@
 ---
 layout: default
-permalink: /about/
+permalink: /om/
 ---
 
-<h1>Im Eivind Høydal</h1>
-<p>I am a 25 year old Cyber Security consultant, welcome to my blog about cyber-security</p>
-<p>Here you can find links to my <a href="https://github.com/eivinhoy">Github</a> page and link to my <a href="https://www.linkedin.com/in/eivindhoydal/">LinkedIn</a> profile</p>
+# Eivind
+Eivind jobber som IT-sikkerhetskonsulent. 
+
+Han har tidligere studert Kommunikasjonsteknologi ved NTNU Gløshaugen med spesialisering innenfor informasjonssikkerhet. Han brenner for gode presentasjoner og har holdt gjesteforelesninger på NTNU om informasjonssikkerhet. 
+
+Denne nettsiden og blogpostene har ingen tilnytting til arbeidsgiver.
+# Kontakt
+[LinkedIn](https://www.linkedin.com/in/eivindhoydal/)
+
