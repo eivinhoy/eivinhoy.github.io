@@ -1,25 +1,44 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
+  <title>eivindhoydal.com</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="resources.css"> <!-- New CSS file for Resources section -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
+
 <body>
+  <!-- Static Navbar -->
   <header>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="resources.html">Resources</a></li>
+      <ul class="nav-links">
+        <li><a href="#" id="nav-home">Home</a></li>
+        <li><a href="#" id="nav-about">About me</a></li>
+        <li><a href="#" id="nav-resources">Resources</a></li>
       </ul>
+
+    <!-- Slider Toggle for Day/Night Mode -->
+    <label class="theme-slider">
+      <input type="checkbox" id="theme-toggle-checkbox">
+      <span class="slider"></span>
+      <span class="theme-text" id="theme-text">Dark Mode</span>
+    </label>
     </nav>
   </header>
-  <main>
-    <h1>Welcome to My Site</h1>
+
+  <!-- Dynamic Content Section -->
+  <main id="content">
+    <!-- Content will be loaded here dynamically -->
+    <h1>Welcome to My Website</h1>
     <p>This is the home page content.</p>
   </main>
+
   <footer>
     <p>&copy; 2024 Eivind Høydal</p>
   </footer>

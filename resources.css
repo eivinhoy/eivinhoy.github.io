@@ -1,0 +1,37 @@
+/* resources.css */
+
+/* Styling for Resource Categories */
+.resource-category {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05); /* Subtle background for each category */
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Styling for Category Headings */
+.resource-category h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+/* Resource List Styling */
+.resource-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resource-list li {
+    margin-bottom: 10px;
+}
+
+.resource-list li a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resource-list li a:hover {
+    text-decoration: underline; /* Underline on hover for better interaction */
+}

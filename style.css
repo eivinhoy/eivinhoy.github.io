@@ -1,68 +1,222 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+/* Global Styles */
+* {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+	box-sizing: border-box;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+/* Ensure html and body take up the full viewport height */
+html, body {
+	height: 100%; /* Ensures the page takes the full viewport height */
 }
+
+/* Flexbox layout for the body to allow footer to be at the bottom of the page or content */
 body {
-	line-height: 1;
+	display: flex;
+	flex-direction: column;
 }
-ol, ul {
+
+/* Main content grows to take available space and push footer down */
+main {
+    flex-grow: 1; /* Ensures the main content expands to push footer down if necessary */
+	background-color: var(--box-bg-color); /* Dynamic background for light and dark modes */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a modern look */
+    max-width: 800px;
+    margin: 20px auto; /* Center the content */
+	color: var(--text-color); /* Dynamic text color */
+}
+
+/* Style heading for emphasis */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: var(--text-color); /* Dynamic text color */
+	font-weight: 600;
+}
+
+/* Improve readability for paragraphs */
+p {
+    line-height: 1.8;  /* Increase line height for readability */
+    margin-bottom: 20px;  /* Space between paragraphs */
+    max-width: 800px;  /* Limit width for better readability */
+	font-weight: 400;
+    font-size: 1rem;
+	color: var(--text-color); /* Dynamic text color */
+}
+
+/* Body style including padding for navbar space and transitions */
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: var(--bg-color); /* Dynamic background color */
+	color: var(--text-color); /* Dynamic text color */
+	transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for theme change */
+	padding-top: 80px; /* This adds space below the fixed navbar to prevent content overlap */
+	margin: 0;
+}
+
+/* Work in Progress Message */
+.wip-message {
+    margin-top: 30px; /* Adds some space above the message */
+    padding: 15px;
+    background-color: rgba(255, 223, 186, 0.2); /* Subtle background color for the message */
+    border-left: 5px solid #FFA500; /* Orange border to catch attention */
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Footer styles to ensure it's centered and aligned at the bottom */
+footer {
+    display: flex;
+    justify-content: center; /* Horizontally centers the footer content */
+    align-items: center; /* Vertically aligns content inside the footer */
+    padding: 10px;
+    background-color: var(--bg-color); /* Dynamic background color */
+    color: var(--text-color); /* Dynamic text color */
+    margin-top: auto; /* Pushes the footer to the bottom */
+    width: 100%; /* Ensures the footer spans the full width */
+    position: relative; /* Ensure it's positioned relative to the page */
+}
+
+/* Full-width Navbar */
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--nav-bg-color, #333); /* Dynamic navbar color */
+	padding: 20px 50px; /* Increase padding for spacious look */
+	width: 100vw; /* Full width of the screen */
+	position: fixed;  /* Makes the navbar fixed at the top */
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Styling the Links */
+.nav-links {
 	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	display: flex;
+	gap: 40px; /* Adds more space between links */
 }
 
-/* My own CSS */
-
-body {
-    max-width:750px;
-    margin:40px auto;
-    padding:0 10px;
-    font-family: "Times New Roman";
-    color:#444
-   }
-h1,
-h2,
-h3 {
-    line-height:1.2
+.nav-links li a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.2rem;
+	padding: 10px 20px;
+	transition: background-color 0.3s ease;
 }
-   
-ul li {
-    display:inline-block;
-    padding-right: 20px;
+
+.nav-links li a:hover {
+	background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+	border-radius: 5px;
+}
+
+/* Slider Toggle for Night Mode */
+.theme-slider {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+}
+
+.theme-slider input {
+	display: none; /* Hide the checkbox */
+}
+
+/* The slider switch */
+.slider {
+	position: relative;
+	width: 50px;
+	height: 24px;
+	background-color: #ccc;
+	border-radius: 34px;
+	transition: background-color 0.3s ease;
+}
+
+.slider:before {
+	content: "";
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	background-color: white;
+	border-radius: 50%;
+	top: 1px;
+	left: 2px;
+	transition: transform 0.3s ease;
+}
+
+/* When checkbox is checked (Night Mode on) */
+input:checked + .slider {
+	background-color: #4CAF50; /* Color change for active state */
+}
+
+input:checked + .slider:before {
+	transform: translateX(26px); /* Move the slider to the right */
+}
+
+/* Theme text */
+.theme-text {
+	color: white;
+	font-size: 1rem;
+	transition: color 0.3s ease;
+}
+
+/* Light and Dark Mode Variables */
+:root {
+	--bg-color: white; /* Background color for light mode */
+	--text-color: black; /* Text color for light mode */
+	--nav-bg-color: #333; /* Navbar color for light mode */
+	--box-bg-color: #f9f9f9; /* Box background color for light mode */
+	--link-color: #0077B5; /* Link color for light mode */
+}
+
+[data-theme="dark"] {
+	--bg-color: #181818; /* Background color for dark mode */
+	--text-color: #f5f5f5; /* Text color for dark mode */
+	--nav-bg-color: #111; /* Navbar color for dark mode */
+	--box-bg-color: #333; /* Box background color for dark mode */
+	--link-color: #58a6ff; /* Link color for dark mode */
+}
+
+/* LinkedIn button styling */
+.linkedin-link {
+    display: inline-block;
+    background-color: var(--link-color); /* Dynamic link color */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.linkedin-link i {
+    margin-right: 10px;
+}
+
+.linkedin-link:hover {
+    background-color: #005582; /* Adjust if needed for dark mode */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .linkedin-link {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
 }
