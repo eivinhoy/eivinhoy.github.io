@@ -46,6 +46,17 @@ p {
 	color: var(--text-color); /* Dynamic text color */
 }
 
+/* Styling specifically for the list in about.html */
+.about-interest-list {
+    padding-left: 20px;  /* Indent the bullet points */
+    margin-bottom: 20px; /* Add space below the list */
+}
+
+.about-interest-list li {
+    margin-bottom: 10px; /* Add space between each list item */
+}
+
+
 /* Body style including padding for navbar space and transitions */
 body {
 	font-family: 'Inter', sans-serif;
@@ -212,9 +223,26 @@ input:checked + .slider:before {
     }
 
     p {
-        font-size: 0.9rem;
+        font-size: 1rem; /* Slightly larger font size for mobile */
+        line-height: 1.6; /* Increase line height for better readability */
     }
 
+    nav ul {
+        padding-left: 10px; /* Add space between the links */
+        padding-right: 10px;
+    }
+
+    .nav-links li a {
+        font-size: 1rem; /* Adjust the font size of nav links */
+        padding: 8px 15px; /* Reduce padding to avoid wrapping */
+    }
+
+    .wip-message p {
+        font-size: 0.95rem; /* Slightly smaller font for mobile */
+        padding: 10px; /* Adjust padding for better spacing on mobile */
+    }
+
+    /* LinkedIn button */
     .linkedin-link {
         padding: 10px 20px;
         font-size: 1rem;
