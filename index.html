@@ -12,23 +12,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-
 <body>
-  <!-- Static Navbar -->
+  <!-- Static Navbar with Hamburger -->
   <header>
     <nav>
-      <ul class="nav-links">
+      <!-- Hamburger Icon for mobile screens -->
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+      
+      <ul class="nav-links" id="nav-links">
         <li><a href="#" id="nav-home">Home</a></li>
         <li><a href="#" id="nav-about">About me</a></li>
         <li><a href="#" id="nav-resources">Resources</a></li>
+        <!-- Night Mode Toggle -->
+        <li>
+          <label class="theme-slider">
+            <input type="checkbox" id="theme-toggle-checkbox">
+            <span class="slider"></span>
+            <span class="theme-text" id="theme-text">Dark Mode</span>
+          </label>
+        </li>
       </ul>
-
-    <!-- Slider Toggle for Day/Night Mode -->
-    <label class="theme-slider">
-      <input type="checkbox" id="theme-toggle-checkbox">
-      <span class="slider"></span>
-      <span class="theme-text" id="theme-text">Dark Mode</span>
-    </label>
     </nav>
   </header>
 
@@ -42,5 +47,24 @@
   <footer>
     <p>&copy; 2024 Eivind Høydal</p>
   </footer>
+
+  <!-- Hamburger Menu Toggle Script -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    const navLinkItems = document.querySelectorAll('.nav-links li a'); // Select all nav links
+  
+    // Toggle the hamburger menu
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+    });
+  
+    // Close the menu when a link is clicked
+    navLinkItems.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('nav-active');
+      });
+    });
+  </script>
 </body>
 </html>

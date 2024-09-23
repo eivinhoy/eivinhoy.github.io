@@ -56,7 +56,6 @@ p {
     margin-bottom: 10px; /* Add space between each list item */
 }
 
-
 /* Body style including padding for navbar space and transitions */
 body {
 	font-family: 'Inter', sans-serif;
@@ -108,6 +107,17 @@ nav {
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+/* Hamburger Menu Styles */
+.hamburger {
+	display: none; /* Hidden by default */
+	cursor: pointer;
+}
+
+.hamburger i {
+	color: white;
+	font-size: 1.5rem; /* Size of the hamburger icon */
+}
+
 /* Styling the Links */
 .nav-links {
 	list-style: none;
@@ -136,8 +146,10 @@ nav {
 	cursor: pointer;
 }
 
+/* Hide the checkbox to prevent any visual square */
 .theme-slider input {
-	display: none; /* Hide the checkbox */
+	opacity: 0;
+	position: absolute;
 }
 
 /* The slider switch */
@@ -150,15 +162,21 @@ nav {
 	transition: background-color 0.3s ease;
 }
 
+/* Adding a FontAwesome moon icon inside the slider */
 .slider:before {
-	content: "";
+	content: "\f186"; /* FontAwesome Unicode for the moon icon */
+	font-family: "Font Awesome 5 Free"; /* FontAwesome font */
+	font-weight: 900; /* Makes the icon solid */
 	position: absolute;
 	width: 22px;
 	height: 22px;
-	background-color: white;
-	border-radius: 50%;
+	font-size: 14px; /* Adjust size of the moon icon */
+	text-align: center;
+	line-height: 22px; /* Vertically center the icon */
 	top: 1px;
 	left: 2px;
+	border-radius: 50%;
+	background-color: white;
 	transition: transform 0.3s ease;
 }
 
@@ -168,14 +186,14 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-	transform: translateX(26px); /* Move the slider to the right */
+	transform: translateX(26px); /* Move the moon to the right when toggled */
 }
 
-/* Theme text */
-.theme-text {
-	color: white;
-	font-size: 1rem;
-	transition: color 0.3s ease;
+/* Hide Dark Mode text on mobile */
+@media (max-width: 768px) {
+    .theme-text {
+        display: none; /* Hide the Dark Mode text on mobile */
+    }
 }
 
 /* Light and Dark Mode Variables */
@@ -215,36 +233,110 @@ input:checked + .slider:before {
     background-color: #005582; /* Adjust if needed for dark mode */
 }
 
-/* Media query for smaller screens */
+[data-theme="dark"] a {
+	color: #58a6ff; /* Light blue color for links in dark mode */
+}
+
+[data-theme="dark"] a:hover {
+	color: #aad8ff; /* Hover color for links in dark mode */
+}
+
+/* General styles for mobile (for screens up to 768px) */
 @media (max-width: 768px) {
-    main {
-        padding: 15px;
-        max-width: 100%;
-    }
-
-    p {
-        font-size: 1rem; /* Slightly larger font size for mobile */
-        line-height: 1.6; /* Increase line height for better readability */
-    }
-
+    /* Navigation Bar */
     nav ul {
-        padding-left: 10px; /* Add space between the links */
-        padding-right: 10px;
+        display: flex;
+        flex-direction: column;  /* Stack nav links vertically on small screens */
+        align-items: center;
+        padding-left: 0;
     }
 
     .nav-links li a {
-        font-size: 1rem; /* Adjust the font size of nav links */
-        padding: 8px 15px; /* Reduce padding to avoid wrapping */
+        font-size: 1rem; /* Make navigation links smaller */
+        padding: 10px 0; /* Adjust padding for vertical layout */
     }
 
-    .wip-message p {
-        font-size: 0.95rem; /* Slightly smaller font for mobile */
-        padding: 10px; /* Adjust padding for better spacing on mobile */
+    /* Hamburger Menu */
+    .hamburger {
+        display: block; /* Show the hamburger menu on mobile screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide the navigation links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Place it below the navbar */
+        left: 0;
+        width: 100%;
+        background-color: var(--nav-bg-color, #333);
+        z-index: 999;
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Add spacing between links */
+    }
+
+    /* Show the nav-links when .nav-active class is added */
+    .nav-active {
+        display: flex;
+    }
+
+    /* Adjust main content */
+    main {
+        padding: 10px; /* Add some padding on the edges */
+        text-align: left; /* Left-align text for better readability on mobile */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Make the main header smaller */
+    }
+
+	/* Adjust font size and bullet size for lists on mobile */
+	ul.about-interest-list {
+		font-size: 0.9rem; /* Reduce the font size of list items */
+		list-style-type: disc; /* Keep the bullet points as circles */
+		margin-left: 5px; /* Ensure proper indentation */
+	}
+
+	ul.about-interest-list li {
+		margin-bottom: 10px; /* Adjust spacing between list items */
+		list-style-position: inside; /* Keep bullets inside */
+	}
+
+    /* WIP Message */
+    .wip-message {
+        padding: 15px; /* Adjust padding for better mobile spacing */
+        margin: 15px auto; /* Ensure proper margin for mobile */
+        font-size: 0.9rem; /* Reduce font size for readability */
+        line-height: 1.4; /* Adjust line height */
     }
 
     /* LinkedIn button */
     .linkedin-link {
         padding: 10px 20px;
-        font-size: 1rem;
+        font-size: 0.9rem; /* Make the LinkedIn button text smaller */
+        display: block;
+        margin: 15px auto; /* Center the LinkedIn button */
+    }
+}
+
+/* Even smaller devices (for screens up to 480px) */
+@media (max-width: 480px) {
+    /* Further adjust font sizes for small screens */
+    h1 {
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
+    }
+
+    p, .wip-message {
+        font-size: 0.85rem; /* Make text smaller for small screens */
+    }
+
+	ul.about-interest-list {
+        font-size: 0.85rem; /* Reduce font size of list items even further */
+    }
+
+    .linkedin-link {
+        font-size: 0.85rem; /* Adjust button text size */
+        padding: 8px 16px; /* Adjust padding on the LinkedIn button */
     }
 }
